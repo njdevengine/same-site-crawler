@@ -11,5 +11,9 @@ import re
 def Find(string): 
     links = re.findall(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\), ]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', string) 
     return links
-    
-Find(my_soup[0])
+
+link_array = []
+for i in range(0,(len(my_soup)-1)):
+    print(i)
+    print(Find(my_soup[i]))
+    link_array.append(Find(my_soup[i]))
